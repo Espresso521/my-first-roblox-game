@@ -1,0 +1,116 @@
+{
+  "name": "jump-demo-roblox",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": {
+      "$ignoreUnknownInstances": true,
+      "Gameplay": {
+        "$className": "Folder",
+        "Scripts": {
+          "$className": "Folder",
+          "$ignoreUnknownInstances": true,
+          "CoinController": {
+            "$path": "src/client/Gameplay/Scripts/CoinController.luau",
+            "$ignoreUnknownInstances": true
+          },
+          "CoinsScript": {
+            "$path": "src/client/Gameplay/Scripts/CoinsScript.server.luau",
+            "$properties": { "RunContext": "Client" }
+          },
+          "OneWayPlatformsScript": {
+            "$path": "src/client/Gameplay/Scripts/OneWayPlatformsScript.server.luau",
+            "$properties": { "RunContext": "Client" }
+          }
+        },
+        "Constants": { "$path": "src/client/Gameplay/Constants.luau" }
+      },
+      "Platformer": {
+        "$className": "Folder",
+        "Scripts": {
+          "$className": "Folder",
+          "$ignoreUnknownInstances": true,
+          "Controller": {
+            "$path": "src/client/Platformer/Scripts/Controller.luau",
+            "$ignoreUnknownInstances": true
+          },
+          "ControlScript": {
+            "$path": "src/client/Platformer/Scripts/ControlScript.server.luau",
+            "$properties": { "RunContext": "Client" }
+          },
+          "FXScript": {
+            "$path": "src/client/Platformer/Scripts/FXScript.server.luau",
+            "$properties": { "RunContext": "Client" }
+          },
+          "SmoothCameraScript": {
+            "$path": "src/client/Platformer/Scripts/SmoothCameraScript.server.luau",
+            "$properties": { "RunContext": "Client" }
+          },
+          "FXController": {
+            "$path": "src/client/Platformer/Scripts/FXController.luau",
+            "$ignoreUnknownInstances": true
+          },
+          "Actions": { "$path": "src/client/Platformer/Scripts/Actions" },
+          "Effects": { "$path": "src/client/Platformer/Scripts/Effects" }
+        },
+        "Constants": { "$path": "src/client/Platformer/Constants.luau" }
+      },
+      "Utility": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "ActionManager": {
+          "$path": "src/shared/Utility/ActionManager",
+          "$ignoreUnknownInstances": true
+        },
+        "InputCategorizer": { "$path": "src/shared/Utility/InputCategorizer.luau" },
+        "calculateVelocityForHeight": { "$path": "src/shared/Utility/calculateVelocityForHeight.luau" },
+        "clampMagnitude": { "$path": "src/shared/Utility/clampMagnitude.luau" },
+        "disconnectAndClear": { "$path": "src/shared/Utility/disconnectAndClear.luau" },
+        "getOrCreateAttachment": { "$path": "src/shared/Utility/getOrCreateAttachment.luau" },
+        "loadModules": { "$path": "src/shared/Utility/loadModules.luau" },
+        "playSoundFromSource": { "$path": "src/shared/Utility/playSoundFromSource.luau" },
+        "safePlayerAdded": { "$path": "src/shared/Utility/safePlayerAdded.luau" },
+        "setVerticalVelocity": { "$path": "src/shared/Utility/setVerticalVelocity.luau" },
+        "simpleParticleBurst": { "$path": "src/shared/Utility/simpleParticleBurst.luau" },
+        "simpleParticleTimed": { "$path": "src/shared/Utility/simpleParticleTimed.luau" }
+      }
+    },
+    "ServerScriptService": {
+      "$ignoreUnknownInstances": true,
+      "Gameplay": {
+        "$className": "Folder",
+        "Scripts": {
+          "$className": "Folder",
+          "$ignoreUnknownInstances": true,
+          "CoinsScript": {
+            "$path": "src/server/Gameplay/Scripts/CoinsScript.server.luau",
+            "$properties": { "RunContext": "Server" }
+          },
+          "MovingPlatformsScript": {
+            "$path": "src/server/Gameplay/Scripts/MovingPlatformsScript.server.luau",
+            "$properties": { "RunContext": "Server" }
+          },
+          "OneWayPlatformsScript": {
+            "$path": "src/server/Gameplay/Scripts/OneWayPlatformsScript.server.luau",
+            "$properties": { "RunContext": "Server" }
+          },
+          "MovingPlatformController": {
+            "$path": "src/server/Gameplay/Scripts/MovingPlatformController",
+            "$ignoreUnknownInstances": true
+          }
+        }
+      },
+      "Platformer": {
+        "$className": "Folder",
+        "Scripts": {
+          "$className": "Folder",
+          "$ignoreUnknownInstances": true,
+          "Replication": {
+            "$path": "src/server/Platformer/Scripts/Replication",
+            "$ignoreUnknownInstances": true,
+            "$properties": { "RunContext": "Server" }
+          }
+        }
+      }
+    }
+  }
+}
