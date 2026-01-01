@@ -110,6 +110,15 @@
             "$properties": { "RunContext": "Server" }
           }
         }
+      },
+      "Utility": {
+        "$className": "Folder",
+        "$ignoreUnknownInstances": true,
+        "TypeValidation": {
+          "$className": "Folder",
+          "validateInstance": { "$path": "src/server/Utility/TypeValidation/validateInstance.luau" },
+          "validateString": { "$path": "src/server/Utility/TypeValidation/validateString.luau" }
+        }
       }
     }
   }

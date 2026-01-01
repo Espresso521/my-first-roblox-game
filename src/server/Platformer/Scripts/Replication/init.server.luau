@@ -7,8 +7,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local ServerScriptService = game:GetService("ServerScriptService")
 
 local Constants = require(ReplicatedStorage.Platformer.Constants)
-local validateString = require(ServerScriptService.Utility.TypeValidation.validateString)
 local validateAction = require(script.validateAction)
+local validateString = require(ServerScriptService.Utility.TypeValidation.validateString)
 
 local remotes = ReplicatedStorage.Platformer.Remotes
 local setActionRemote = remotes.SetAction
