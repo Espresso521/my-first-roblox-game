@@ -11,7 +11,7 @@ local lowerTorso = character:WaitForChild("LowerTorso")
 local rootJoint = lowerTorso:WaitForChild("Root")
 
 local ROLL_ANGLE = math.rad(5)
-local PITCH_ANGLE = math.rad(15)
+local PITCH_ANGLE = math.rad(25)
 local LEAN_SPEED = 15
 
 local leanCFrame = CFrame.new()
@@ -34,22 +34,21 @@ local function onStepped(_: number, deltaTime: number)
 	leanCFrame = leanCFrame:Lerp(CFrame.Angles(pitch, 0, roll), math.min(deltaTime * LEAN_SPEED, 1))
 	rootJoint.Transform = leanCFrame * rootJoint.Transform
 
-	--local velocity = character.HumanoidRootPart.Velocity
-	--local horizontalSpeed = Vector3.new(velocity.X, 0, velocity.Z).Magnitude
+	local isGrounded = humanoid.FloorMaterial ~= Enum.Material.Air
+	local fovSpeed = isGrounded and 0.1 or 0.02
 
-	--local targetFov = math.clamp(
-	--	70 + horizontalSpeed * 0.5,
-	--	70,
-	--	90
-	--)
-
-	--camera.FieldOfView = math.lerp(
-	--	camera.FieldOfView,
-	--	targetFov,
-	--	0.1
-	--)
-
-
+	local velocity = character.HumanoidRootPart.Velocity
+	local horizontalSpeed = Vector3.new(velocity.X, 0, velocity.Z).Magnitude
+	local targetFov = math.clamp(
+		70 + horizontalSpeed * 0.5,
+		70,
+		90
+	)
+	camera.FieldOfView = math.lerp(
+			camera.FieldOfView,
+			targetFov,
+			fovSpeed
+	)
 end
 
 RunService.Stepped:Connect(onStepped)
