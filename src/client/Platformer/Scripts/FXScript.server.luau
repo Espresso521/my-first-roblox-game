@@ -5,8 +5,8 @@
 
 local ReplicatedStorage = game:GetService("ReplicatedStorage")
 
-local safePlayerAdded = require(ReplicatedStorage.Utility.safePlayerAdded)
 local FXController = require(script.Parent.FXController)
+local safePlayerAdded = require(ReplicatedStorage.Utility.safePlayerAdded)
 
 local function onCharacterAdded(character: Model)
 	-- Create a new FXController for each character that gets added

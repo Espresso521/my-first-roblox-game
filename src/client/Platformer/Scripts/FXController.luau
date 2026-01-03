@@ -9,8 +9,8 @@ local ReplicatedStorage = game:GetService("ReplicatedStorage")
 local Workspace = game:GetService("Workspace")
 
 local Constants = require(ReplicatedStorage.Platformer.Constants)
-local loadModules = require(ReplicatedStorage.Utility.loadModules)
 local disconnectAndClear = require(ReplicatedStorage.Utility.disconnectAndClear)
+local loadModules = require(ReplicatedStorage.Utility.loadModules)
 local playSoundFromSource = require(ReplicatedStorage.Utility.playSoundFromSource)
 
 local Actions = loadModules(script.Parent.Actions)

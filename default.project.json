@@ -120,6 +120,15 @@
           "validateString": { "$path": "src/server/Utility/TypeValidation/validateString.luau" }
         }
       }
+    },
+    "StarterPlayer": {
+      "$ignoreUnknownInstances": true,
+        "StarterCharacterScripts":{
+          "$ignoreUnknownInstances": true,
+          "CharacterLeanScript": {
+            "$path": "src/starterplayer/CharacterLeanScript.client.luau"
+        }
+      }
     }
   }
 }
