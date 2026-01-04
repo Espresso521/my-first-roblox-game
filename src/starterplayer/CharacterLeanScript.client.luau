@@ -5,8 +5,6 @@ local character = script.Parent
 print("LeanScript 启动！当前父级是: " .. character.Name) -- 调试日志
 
 -- 确保这是 R15 角色
-local humanoid = character:WaitForChild("Humanoid")
-local root = character:WaitForChild("HumanoidRootPart")
 local lowerTorso = character:WaitForChild("LowerTorso")
 local rootJoint = lowerTorso:WaitForChild("Root")
 
@@ -18,6 +16,15 @@ local leanCFrame = CFrame.new()
 local camera = workspace.CurrentCamera
 
 local function onStepped(_: number, deltaTime: number)
+
+	local humanoid = character:FindFirstChildOfClass("Humanoid")
+	local root = character:FindFirstChild("HumanoidRootPart")
+
+	if not humanoid or humanoid.Health <= 0 or not root then
+		camera.FieldOfView = math.lerp(camera.FieldOfView, 70, 0.2)
+		return
+	end
+
 	local moveVelocity = humanoid:GetMoveVelocity()
 	local relativeVelocity = root.CFrame:VectorToObjectSpace(moveVelocity)
 
